@@ -1,0 +1,5 @@
+cmake_minimum_required (VERSION 2.0)
+project (WaifuBot)
+subdirs (WaifuBot source)
+include_directories($(WaifuBot_SOURCE_DIR)/headers)
+add_executable(WaifuBot main.cpp)
