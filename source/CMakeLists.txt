@@ -1,3 +1,6 @@
 include_directories(${WaifuBot_SOURCE_DIR}/headers)
+FILE(GLOB_RECURSE AllHeaders ${WaifuBot_SOURCE_DIR}/headers/*.h)
 FILE(GLOB AllSources *.cpp)
-add_executable(WaifuBot ${AllSources})
+source_group("Headers" FILES ${AllHeaders})
+set(SOURCES ${AllSources} ${AllHeaders})
+add_executable(WaifuBot ${SOURCES})
